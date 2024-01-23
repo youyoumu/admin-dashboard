@@ -1,0 +1,342 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------------------reset css ---------------------- */
+
+* {
+    border: dotted 1px;
+}
+
+/* body {
+    width: 1366px;
+    height: 728px;
+} */
+
+h2, h3, h4, a, p {
+    font-family: sans-serif;
+}
+
+.main-container {
+    display: grid;
+    grid-template: 
+    "sidebar header"
+    "sidebar article";
+    grid-template-columns: 300px 1fr;
+    /* grid-template-rows: 250px 1fr; */
+}
+
+.pfp {
+    max-height: 70px;
+    border-radius: 50%;
+}
+
+.profile > .pfp {
+    max-height: 50px;
+}
+
+.greet > div > h4 {
+    font-size: 0.8rem;
+    color: #e5b567;
+
+}
+
+.greet > div > h3 {
+    margin-top: 5px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #e5b567;
+}
+
+.header-button {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 20px;
+    margin: 0px 30px;
+}
+
+.header-button > button {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.075);
+    border-style: none;
+    height: 30px;
+    width: 90px;
+    background-color: #e5b567;
+    color: #2e2e2e;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.icon {
+    filter: invert(1)
+}
+
+.sidebar {
+    background-color: #202020;
+    grid-area: sidebar;
+    display: grid;
+    grid-template-columns: auto;
+    align-content: start;
+    gap: 40px;
+    padding: 20px;
+}
+
+.menu > div > a {
+    color: #e5b567;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+.sidebar-menu {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo > a {
+    color: #e5b567;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.logo > img {
+    height: 60px;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.profile > a {
+    color: #e5b567;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.header {
+    background-color: #464646;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.search > form {
+    display: flex;
+}
+
+.search > form > input {
+    flex-grow: 1;
+    height: 1.2rem;
+    border-radius: 15px;
+    border: none;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 30px auto auto;
+    align-items: center;
+    gap: 20px;
+    margin-right: 40px;
+}
+
+.header-bot {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 20px;
+}
+
+.greet {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+}
+
+.article {
+    padding-top: 30px;
+    background-color: #2e2e2e;
+    grid-area: article;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    box-shadow: inset 0px 1px 5px 1px rgba(0, 0, 0, 0.178);
+}
+
+.project > h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #e5b567;
+}
+
+.project-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-content: start;
+    padding: 20px;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #d6d6d6;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.096);
+}
+
+.project-card > h3 {
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.project-card > p {
+    margin: 5px 0px 20px 0px;
+    color:  #797979;
+}
+
+.project-action {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    gap: 20px;
+}
+
+.announcements > h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:#e5b567;
+}
+
+.announcements-card > div > h3 {
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.announcements-card > div > p {
+    margin-top: 5px;
+    color: #797979;
+    font-size: 0.8rem;
+}
+
+.announcements-card {
+    background-color: #d6d6d6;
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.178);
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+}
+
+.trending {
+    margin-top: 20px;
+}
+
+.trending > h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e5b567;
+}
+
+.trending-profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+}
+
+.trending-card {
+    background-color: #d6d6d6;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto;
+    padding: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.trending-profile > div > h4 {
+    font-size: 0.9rem;
+    margin: 0px;
+}
+
+.trending-profile > div > p {
+    margin-top: 5px;
+    color: #797979;
+    font-size: 0.9rem;
+}
+
+.trending-profile > img {
+    max-height: 50px;
+}
