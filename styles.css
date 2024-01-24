@@ -60,6 +60,7 @@ table {
 
 h2, h3, h4, a, p {
     font-family: sans-serif;
+    color: #2e2e2e;
 }
 
 .main-container {
@@ -250,6 +251,11 @@ h2, h3, h4, a, p {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.096);
+    border-left: solid 6px #6c99bb;
+}
+
+.project-card > div > img {
+    filter: invert(13%) sepia(6%) saturate(21%) hue-rotate(4deg) brightness(103%) contrast(88%);
 }
 
 .project-card > h3 {
@@ -288,6 +294,13 @@ h2, h3, h4, a, p {
     font-size: 0.8rem;
 }
 
+.announcements-card > div:nth-child(2) {
+    border-top: solid 1px #2e2e2e2f;
+    border-bottom: solid 1px #2e2e2e2f;
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+
 .announcements-card {
     background-color: #d6d6d6;
     padding: 20px;
@@ -297,7 +310,7 @@ h2, h3, h4, a, p {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.178);
     display: grid;
     grid-template-columns: auto;
-    gap: 20px;
+    gap: 10px;
 }
 
 .trending {
@@ -324,6 +337,7 @@ h2, h3, h4, a, p {
     padding: 20px;
     margin-right: 20px;
     margin-top: 20px;
+    border-radius: 5px;
 }
 
 .trending-profile > div > h4 {
